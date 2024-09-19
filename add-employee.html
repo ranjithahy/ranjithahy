@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="add-employee-body">
+    <div class="employee-container">
+        <h2>Add Employee</h2>
+
+        <!-- Add Employee Form -->
+        <form id="addEmployeeForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Employee Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter Employee Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" placeholder="Enter Mobile Number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="designation">Designation:</label>
+                <select id="designation" required>
+                    <option value="" disabled selected>Select Designation</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Team Leader">Team Leader</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Tester">Tester</option>
+                    <option value="Intern">Intern</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Other" required> Other</label>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course:</label>
+                <input type="text" id="course" placeholder="Enter Course Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="image">Upload Employee Image:</label>
+                <input type="file" id="image" accept="image/*" required>
+            </div>
+
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+
+    <!-- Link the JavaScript file -->
+    <script src="add-employee.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <h2>Admin Dashboard</h2>
+        <div class="header-right">
+            <span id="adminName">Welcome Admin</span>
+            <a href="index.html" class="home-link">Home</a>
+            <a href="index.html" class="logout-link">Logout</a>
+        </div>
+    </div>
+
+    <!-- Dashboard Main Content -->
+    <div class="dashboard-container">
+        <h3>Welcome to the Admin pannel</h3>
+        <nav>
+            <a href="add-employee.html">Add Employee</a>
+            <a href="view-employees.html">View Employee Details</a>
+        </nav>
+    </div>
+
+    <script>
+        // Retrieve admin name from login (can be stored in localStorage for demo purposes)
+        const loggedInAdmin = localStorage.getItem('adminUsername') || 'Admin';
+        document.getElementById('adminName').textContent = `Welcome, ${loggedInAdmin}`;
+    </script>
+</body>
+</html>
+
+
+<script>
+    // Handle the logout event
+    document.getElementById('logoutLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        localStorage.removeItem('adminUsername'); // Clear stored admin name
+        window.location.href = "index.html"; // Redirect to login page
+    });
+</script>
